@@ -73,7 +73,7 @@ namespace OrderApi.Controllers
                 // Call product service to get the product ordered.
                 // You may need to change the port number in the BaseUrl below
                 // before you can run the request.
-                RestClient c = new RestClient("https://localhost:5001/products/");
+                RestClient c = new RestClient("https://productapi/products/");
                 var request = new RestRequest(orderLine.ProductId.ToString());
                 var response = c.GetAsync<ProductDto>(request);
                 response.Wait();
@@ -93,7 +93,7 @@ namespace OrderApi.Controllers
                 // Call product service to get the product ordered.
                 // You may need to change the port number in the BaseUrl below
                 // before you can run the request.
-                RestClient c = new RestClient("https://localhost:5001/products/");
+                RestClient c = new RestClient("https://productapi/products/");
                 var request = new RestRequest(orderLine.ProductId.ToString());
                 var response = c.GetAsync<ProductDto>(request);
                 response.Wait();
